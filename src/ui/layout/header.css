@@ -1,0 +1,15 @@
+:root {
+  --bg: #e9eaff;
+  --bg2: #fbfaff;
+  --font: #2573eb;
+  --login-bg: #e3ecfe;
+}
+
+header {
+    background-color: var(--bg2);
+    color: var(--font);
+    padding-bottom: 25px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }

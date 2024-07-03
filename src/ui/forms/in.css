@@ -1,0 +1,210 @@
+:root {
+    --bg: #e9eaff;
+    --bg2: #fbfaff;
+    --font: #2573eb;
+    --login-bg: #e3ecfe;
+  }
+
+
+body {
+    background-color: var(--md-sys-color-on-primary);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 100dvh;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow-y: scroll;
+}
+
+body h2 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.container {
+    
+    border-radius: 1rem;
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    max-width: 920px;
+    padding: 1.2rem;
+    box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.212);
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* PRA DAR ESPAÇAMENTO ENTRE COLUNAS E LINHAS */
+}
+
+
+.container img {
+  width: 50%; /* Ajusta a largura para ocupar todo o espaço disponível do contêiner pai */
+  height: auto; /* Mantém a proporção original da imagem */
+  border-radius: 20px;
+  object-fit: contain; /* Mantém a imagem dentro do contêiner pai sem cortes */
+}
+
+@media (max-width: 700px) {
+    .container img {
+      
+      display: none; /* Esconde a imagem */
+    }
+  }
+  
+.container form {
+    width: 100%;
+}
+
+form h2 {
+    text-align: center;
+}
+
+
+
+
+
+
+.form-control  input.mouse-on-input,
+.form-control textarea.mouse-on-input{
+  box-shadow: 1px 1px 12px 1px lightblue;
+}
+
+@keyframes borderGreen {
+    from {
+        border-color: #ccc; /* Cor inicial da borda */
+    }
+    to {
+        border-color: #488237; /* Cor final da borda */
+    }
+}
+
+@keyframes borderRed {
+    from {
+        border-color: #ccc; /* Cor inicial da borda */
+    }
+    to {
+        border-color: #ac5452; /* Cor final da borda */
+    }
+}
+
+.form-control.success input,
+.form-control.success textarea {
+    animation: borderGreen 0.5s forwards; /* 0.5s é a duração da animação */
+    border-width: 2px;
+}
+
+.form-control.error input,
+.form-control.error textarea {
+    animation: borderRed 0.5s forwards;
+    border-width: 2px;
+}
+
+
+.form-container button {
+    background-color: var(--font);
+    border-radius: 2rem;
+    padding: 10px 24px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    width: 100%;
+}
+
+.form-container button:hover{
+    background-color: #5094c9;
+    color: white;
+  
+}
+
+
+
+.form-container button, span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.form-container a {
+    color: #5094c9;
+    text-decoration: 'underline';
+}
+
+.form-container label, span {
+
+  color: black;
+}
+
+
+
+ 
+
+
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    bottom: 20px;
+   
+ 
+ 
+    /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+   /* Espaçamento interno */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Movimento para baixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    animation: fadeIn 0.5s
+}
+
+.modal-content h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    color: black;
+}
+
+.modal-content p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 0.75rem;
+    color: black;
+}
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
